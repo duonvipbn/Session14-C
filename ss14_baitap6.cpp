@@ -1,19 +1,14 @@
 #include <stdio.h>
-#include <ctype.h>  
-
-int main() {
-    char str[100];
-    int count = 0; 
-
-    printf("nhap vao mot chuoi: ");
-    fgets(str, sizeof(str), stdin);
-
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (isalpha(str[i])) {
-            count++;
-        }
-    }
-    printf("so luong chu cai trong chuoi la: %d\n", count);
-
-    return 0;
+#include <string.h>
+int main(){
+	char str[] = "Hello World!";
+	int count = 0;
+	int length = strlen(str);
+	for(int i = 0; i < length; i++){
+		if((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')){
+			count ++;
+		}		
+	}
+	printf("%d", count);
+	return 0;
 }
